@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+                INSOMNIA COOKIES
+        </title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- TITULO -->
+        <titulo>Insomnia Cookies</titulo>
+
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- BOTONES -->
+
+        <div class="buttons">
+        <!--    <a class="btn blue">Blue Button</a> -->
+        <!--    <a class="btn green">Green Button</a> -->
+            <a class="btn red" name="botonIngreso" id="open_ingreso">Ingresa</a>
+            <a class="btn red" name="botonRegistro" id="open_registro">Registrate</a>
+        <!--    <a class="btn purple">Purple Button</a> -->
+        <!--    <a class="btn orange">Orange Button</a> -->
+        <!--    <a class="btn yellow">Yellow Button</a> -->
+        </div>
+    
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- VENTANAS -->
+        <div class="modal-container-ingreso" id="modal_container_ingreso">
+            <div class="ingreso">
+                <h1>Ingreso</h1>
+                <form class="formulario" name="formulario_ingreso">
+                    <input type="text" class="casillas" placeholder="Email" name="correo">
+                    <br/>
+                    <input type="text" class="casillas" placeholder="Password" name="password">
+                    <br/>
+                </form>
+                <a href="#" class="link" id="ingreso_registro">No estas registrado?</a>
+                <br/><br/>
+                <button class="btn red" name="CerrarIngreso" id="close_ingreso">Cerrar</button>
+                <button class="btn green" name="AceptarIngreso" id="aceptar_ingreso">Ingresar</button>
+            </div>
+        </div>
+        <div class="modal-container-registro" id="modal_container_registro">
+            <div class="registro">
+                <h1>Registro</h1>
+                <form class="formulario" name="formulario_registro">
+                    <input type="text" class="casillas" placeholder="Nombres" name="nombre">
+                    <br/>
+                    <input type="text" class="casillas" placeholder="Apellidos" name="apellido">
+                    <br/>
+                    <input type="text" class="casillas" placeholder="Email" name="correo">
+                    <br/>
+                    <input type="text" class="casillas" placeholder="Password" name="password">
+                    <br/>
+                    <input type="text" class="casillas" placeholder="Confirme Password" name="confirmpassword">
+                    <br/>
+                </form>
+                <a href="#" class="link" id="registro_ingreso">Ya estas registrado?</a>
+                <br/><br/>
+                <button class="btn red" name="CerrarRegistro" id="close_registro">Cerrar</button>
+                <button type="submit" class="btn green" name="AceptarRegistro" id="aceptar_registro">Registro</button>
+            </div>
+        </div>
+    
+        <!------------------------------------------------------------------------------------------------------------------>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/inicio.css') }}">
+        <script src="{{ url_for('static', filename='js/inicio.js') }}"> </script>
+    </body>
+</html>

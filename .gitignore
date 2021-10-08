@@ -1,0 +1,5 @@
+#No me cambies, no almuerce
+_pycache_/
+Scripts/
+Lib/
+pyvenv.cfg
