@@ -1,5 +1,5 @@
 #No me cambies, no almuerce
-_pycache_/
+__pycache__/
 Scripts/
 Lib/
 pyvenv.cfg
