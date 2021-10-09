@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html >
-<head>
-  <meta charset="UTF-8">
-  <title>
-    INSOMNIA COOKIES
-    </title>
-  <script src="https://use.typekit.net/vms5sey.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
-</head>
+      <head>
+            <title>
+            INSOMNIA COOKIES - MENU
+            </title>
+            <meta charset="UTF-8">
+      </head>
+      <body>  
+        <div class="topnav">
+          <h2>Insomnia Cookies</h2>
+          <h2>Menu</h2>
+          <input type="text" placeholder="Busqueda">
+        </div>
+        
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- BOTONES -->
 
-<body>
-  
-<div class="slideShow">
-  <ul class="slideShow__container">
-    <li class="slideShow__slide">
-      <figure class="slideShow__image" style="background-image:url('/static/img/menu01.jpg');"></figure>
-      <div class="slideShow__titleWrap">
-        <h2 class="slideShow__slideTitle">Barichara</h2>
-        <div class="slideShow__slideSubTitle">La Abuelita</div>
-      </div>
-    </li>
-    <li class="slideShow__slide">
-      <figure class="slideShow__image" style="background-image:url('/static/img/menu02.jpg');"></figure>
-      <div class="slideShow__titleWrap">
-        <h2 class="slideShow__slideTitle">Tayrona</h2>
-        <div class="slideShow__slideSubTitle">La playa</div>
-      </div>
-    </li>
-    <li class="slideShow__slide">
-      <figure class="slideShow__image" style="background-image:url('/static/img/menu03.jpg');"></figure>
-      <div class="slideShow__titleWrap">
-        <h2 class="slideShow__slideTitle">Santa Marta</h2>
-        <div class="slideShow__slideSubTitle">El Burro</div>
-      </div>
-    </li>
-    <li class="slideShow__slide">
-      <figure class="slideShow__image" style="background-image:url('/static/img/menu04.jpg');"></figure>
-      <div class="slideShow__titleWrap">
-        <h2 class="slideShow__slideTitle">Salento</h2>
-        <div class="slideShow__slideSubTitle">La vista</div>
-      </div>
-    </li>
-  </ul>
-  <div class="slideShow__next"><i class="fa fa-angle-right"></i></div>
-  <div class="slideShow__prev"><i class="fa fa-angle-left"></i></div>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
-<!--  <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js'></script>-->
+        <button class="tablink" onclick="openPage('Menu1', this, 'rgb(65, 65, 65)')">Menu 1</button>
+        <button class="tablink" onclick="openPage('Menu2', this, 'rgb(65, 65, 65)')" id="defaultOpen">Menu 2</button>
+        <button class="tablink" onclick="openPage('Menu3', this, 'rgb(65, 65, 65)')">Menu 3</button>
+        <button class="tablink" onclick="openPage('Menu4', this, 'rgb(65, 65, 65)')">Menu 4</button>
+        
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- VENTANAS -->
+        
+        <div id="Menu1" class="tabcontent">
+          <h3>Menu 1</h3>
+          <p>Home is where the heart is..</p>
+        </div>
+        
+        <div id="Menu2" class="tabcontent">
+          <h3>Menu 2</h3>
+          <p>Some news this fine day!</p>
+        </div>
+        
+        <div id="Menu3" class="tabcontent">
+          <h3>Menu 3</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+        
+        <div id="Menu4" class="tabcontent">
+          <h3>Menu 4</h3>
+          <p>Who we are and what we do.</p>
+        </div>
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}">
-<script src="{{ url_for('static', filename='js/menu.js') }}"> </script>
-
-</body>
+        <!------------------------------------------------------------------------------------------------------------------>
+        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}">
+        <script src="{{ url_for('static', filename='js/menu.js') }}"> </script>
+      </body>
 </html>
