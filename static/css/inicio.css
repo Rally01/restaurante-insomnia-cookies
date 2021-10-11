@@ -135,7 +135,7 @@ titulo:after
 .modal-container-ingreso
 {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(65, 65, 65, 0.2);
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -167,7 +167,7 @@ titulo:after
 .modal-container-registro 
 {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(65, 65, 65, 0.2);
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -188,7 +188,7 @@ titulo:after
 .registro
 {
   background-color: rgba(255, 255, 255, 0.9);
-  width: 600px;
+  width: 400px;
   max-width: 100%;
   padding: 30px 50px;
   border-radius: 5px;
@@ -232,4 +232,9 @@ input
   margin:27px 28%;
   color:#858585;
   font-weight:lighter;
+}
+
+h1
+{
+  color: #858585;
 }

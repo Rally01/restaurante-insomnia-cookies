@@ -56,6 +56,7 @@ aceptar_ingreso.addEventListener('click', () => {
         return false;
     }
     alert ('Prueba validar ingreso');
+    window.location = "menu";
 
 });    
 
@@ -105,4 +106,5 @@ aceptar_registro.addEventListener('click', () => {
         return false;
     }
     alert ('Prueba validar registro');
+    window.location = "menu";
 }); 

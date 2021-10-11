@@ -7,46 +7,232 @@
             <meta charset="UTF-8">
       </head>
       <body>  
-        <div class="topnav">
-          <h2>Insomnia Cookies</h2>
-          <h2>Menu</h2>
-          <input type="text" placeholder="Busqueda">
-        </div>
+                
+        <!------------------------------------------------------------------------------------------------------------------>
+        <!-- MENU TOP -->
         
+        <div class="topnav container-fluid">
+          <div class="row">
+            <div class="col-4 text-left">
+              <h2 class="topnavletra fw-bold">Insomnia Cookies</h2>
+            </div>
+            <div class="col-5 text-left">
+            </div>
+            <div class="col-1" style="text-align:left; margin-top: 15px; margin-bottom: 15px;">
+              <input class="form-control" type="text" placeholder="Busqueda">
+            </div>
+            <div class="dropdown col-1" style="left:50px; margin-top: 15px; margin-bottom: 15px; position: static;">
+              <button class="btn btn-outline-light dropdown-toggle fw-bold" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                Usuario
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Perfil</button></li>
+                <li><button class="dropdown-item" type="button">Carro de compras</button></li>
+                <li><button class="dropdown-item" type="button">Cerrar Sesion</button></li>
+              </ul>
+            </div>
+            <div class="col-1 text-rigth">
+              <button type="button" class="fas fa-shopping-bag tamañoicono btn btn-outline-light"></button>
+              <h2 class="topnavletra topnavposition fw-bold">Menu</h2>
+            </div>
+          </div>
+        </div>
+ 
         <!------------------------------------------------------------------------------------------------------------------>
         <!-- BOTONES -->
 
-        <button class="tablink" onclick="openPage('Menu1', this, 'rgb(65, 65, 65)')">Menu 1</button>
-        <button class="tablink" onclick="openPage('Menu2', this, 'rgb(65, 65, 65)')" id="defaultOpen">Menu 2</button>
-        <button class="tablink" onclick="openPage('Menu3', this, 'rgb(65, 65, 65)')">Menu 3</button>
-        <button class="tablink" onclick="openPage('Menu4', this, 'rgb(65, 65, 65)')">Menu 4</button>
+        <button class="tablink fw-bold" onclick="openPage('Menu1', this, 'rgb(65, 65, 65, 0.85)')"id="defaultOpen">Cookies</button>
+        <button class="tablink fw-bold" onclick="openPage('Menu2', this, 'rgb(65, 65, 65, 0.85)')">Bread</button>
+        <button class="tablink fw-bold" onclick="openPage('Menu3', this, 'rgb(65, 65, 65, 0.85)')">Desserts</button>
+        <button class="tablink fw-bold" onclick="openPage('Menu4', this, 'rgb(65, 65, 65, 0.85)')">Donuts</button>
         
         <!------------------------------------------------------------------------------------------------------------------>
         <!-- VENTANAS -->
         
         <div id="Menu1" class="tabcontent">
-          <h3>Menu 1</h3>
-          <p>Home is where the heart is..</p>
+          <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel1">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/cookies01.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold" id="open_menu1">CHOCOLATE CHIPS COOKIES</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/cookies02.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">RED VELVET COOKIES</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/cookies03.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">ROSE CREAM COOKIES</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         
         <div id="Menu2" class="tabcontent">
-          <h3>Menu 2</h3>
-          <p>Some news this fine day!</p>
+          <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel2">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/bread01.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold" id="open_menu1">SOURDOUGH FIRST</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/bread02.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">SOURDOUGH LARGE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/bread03.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">SOURDOUGH SMALL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         
         <div id="Menu3" class="tabcontent">
-          <h3>Menu 3</h3>
-          <p>Get in touch, or swing by for a cup of coffee.</p>
+          <div id="carouselExampleCaptions3" class="carousel slide" data-bs-ride="carousel1">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/dessert01.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold" id="open_menu1">DECADENT DESSERT</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/dessert02.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">VEGAN DESSERT</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/dessert03.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">RASP-BLACK DESSERT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
         </div>
         
         <div id="Menu4" class="tabcontent">
-          <h3>Menu 4</h3>
-          <p>Who we are and what we do.</p>
+          <div id="carouselExampleCaptions4" class="carousel slide" data-bs-ride="carousel1">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/donuts01.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold" id="open_menu1">BLACK CHOCOLATE DONUT</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/donuts02.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">COLOR CHIPS DONUT</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/donuts03.jpg') }}" class="rounded mx-auto d-block" alt="..." style="width: 1280px; height: 720px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="modal-container-imagen">
+                    <button type="button" class="btn btn-outline-light fw-bold">FREE GLUTEN DONUT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        </div>
         </div>
 
         <!------------------------------------------------------------------------------------------------------------------>
-        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="{{ url_for('static', filename='js/menu.js') }}"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       </body>
 </html>
