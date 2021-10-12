@@ -1,7 +1,7 @@
 /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html 
 {
-  background-image: url('/static/img/inicio05.jpg');
+  background-image: url('/static/img/menu03.jpg');
   background-size: 100%;
   height: auto;
   margin: 0;

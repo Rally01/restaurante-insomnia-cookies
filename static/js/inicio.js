@@ -35,8 +35,8 @@ registro_ingreso.addEventListener('click', () => {
 });
 
 aceptar_ingreso.addEventListener('click', () => {
-    var inputEmail = document.formulario_ingreso.correo;
-    var inputPass = document.formulario_ingreso.password;
+    var inputEmail = document.formulario_ingreso.correoingreso;
+    var inputPass = document.formulario_ingreso.passwordingreso;
     
     var userEmail = inputEmail.value;
     var userPass = inputPass.value;
@@ -55,17 +55,17 @@ aceptar_ingreso.addEventListener('click', () => {
         inputPass.focus();
         return false;
     }
-    alert ('Prueba validar ingreso');
-    window.location = "menu";
+    //alert ('Prueba validar ingreso');
+//    window.location = "menu";
 
 });    
 
 aceptar_registro.addEventListener('click', () => {
-    var inputName = document.formulario_registro.nombre;
-    var inputLastN = document.formulario_registro.apellido;
-    var inputEmail = document.formulario_registro.correo;
-    var inputPass = document.formulario_registro.password;
-    var inputConfPass = document.formulario_registro.confirmpassword;
+    var inputName = document.formulario_registro.nombreregistro;
+    var inputLastN = document.formulario_registro.apellidoregistro;
+    var inputEmail = document.formulario_registro.correoregistro;
+    var inputPass = document.formulario_registro.passwordregistro;
+    var inputConfPass = document.formulario_registro.confirmpasswordregistro;
     
     var userName = inputName.value;
     var userLastN = inputLastN.value;
@@ -105,6 +105,6 @@ aceptar_registro.addEventListener('click', () => {
         inputConfPass.focus();
         return false;
     }
-    alert ('Prueba validar registro');
-    window.location = "menu";
+    //alert ('Prueba validar registro');
+//    window.location = "menu";
 }); 
