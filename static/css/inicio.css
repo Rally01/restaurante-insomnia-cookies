@@ -238,3 +238,21 @@ h1
 {
   color: #858585;
 }
+
+.tamañoiconoingreso
+{
+  color: #858585;
+  font-size: 25px;
+  position: fixed;
+  top: 280px;
+  right: 670px;
+}
+
+.tamañoiconoregistro
+{
+  color: #858585;
+  font-size: 25px;
+  position: fixed;
+  top: 170px;
+  right: 670px;
+}

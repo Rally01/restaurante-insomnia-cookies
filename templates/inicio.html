@@ -37,9 +37,10 @@
                     <br/>
                     <a href="#" class="link" id="ingreso_registro">No estas registrado?</a>
                     <br/><br/>
-                    <button class="btn red" name="CerrarIngreso" id="close_ingreso">Cerrar</button>
                     <button type="submit" class="btn green" name="AceptarIngreso" id="aceptar_ingreso">Ingresar</button>
                 </form>
+                <!--<button class="btn red" name="CerrarIngreso" id="close_ingreso">Cerrar</button>-->
+                <a href="#" class="fas fa-times tamañoiconoingreso" name="CerrarIngreso" id="close_ingreso"></a>
             </div>
         </div>
         <div class="modal-container-registro" id="modal_container_registro">
@@ -58,14 +59,15 @@
                     <br/>
                     <a href="#" class="link" id="registro_ingreso">Ya estas registrado?</a>
                     <br/><br/>
-                    <button class="btn red" name="CerrarRegistro" id="close_registro">Cerrar</button>
                     <button type="submit" class="btn green" name="AceptarRegistro" id="aceptar_registro">Registro</button>
                 </form>
+                <a href="#" class="fas fa-times tamañoiconoregistro" name="CerrarRegistro" id="close_registro"></a>
             </div>
         </div>
     
         <!------------------------------------------------------------------------------------------------------------------>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/inicio.css') }}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script src="{{ url_for('static', filename='js/inicio.js') }}"> </script>
     </body>
 </html>
