@@ -31,9 +31,9 @@
             <div class="ingreso">
                 <h1>Ingreso</h1>
                 <form action= "/ingreso/" class="formulario" name="formulario_ingreso" method="POST"> 
-                    <input type="text" class="casillas" placeholder="Email" name="correoingreso">
+                    <input type="text" class="casillas" placeholder="Email" name="correoingreso" required>
                     <br/>
-                    <input type="password" class="casillas" placeholder="Password" name="passwordingreso">
+                    <input type="password" class="casillas" placeholder="Password" name="passwordingreso" required>
                     <br/>
                     <a href="#" class="link" id="ingreso_registro">No estas registrado?</a>
                     <br/><br/>
@@ -47,15 +47,15 @@
             <div class="registro">
                 <h1>Registro</h1>
                 <form action="/registro/" class="formulario" name="formulario_registro" method="POST">
-                    <input type="text" class="casillas" placeholder="Nombres" name="nombreregistro">
+                    <input type="text" class="casillas" placeholder="Nombres" name="nombreregistro" required>
                     <br/>
-                    <input type="text" class="casillas" placeholder="Apellidos" name="apellidoregistro">
+                    <input type="text" class="casillas" placeholder="Apellidos" name="apellidoregistro" required>
                     <br/>
-                    <input type="text" class="casillas" placeholder="Email" name="correoregistro">
+                    <input type="text" class="casillas" placeholder="Email" name="correoregistro" required>
                     <br/>
-                    <input type="password" class="casillas" placeholder="Password" name="passwordregistro">
+                    <input type="password" class="casillas" placeholder="Password" name="passwordregistro" required>
                     <br/>
-                    <input type="password" class="casillas" placeholder="Confirme Password" name="confirmpasswordregistro">
+                    <input type="password" class="casillas" placeholder="Confirme Password" name="confirmpasswordregistro" required>
                     <br/>
                     <a href="#" class="link" id="registro_ingreso">Ya estas registrado?</a>
                     <br/><br/>
