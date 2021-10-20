@@ -7,7 +7,6 @@
             <meta charset="UTF-8">
       </head>
       <body>  
-                
         <!------------------------------------------------------------------------------------------------------------------>
         <!-- MENU TOP -->
         
@@ -23,7 +22,7 @@
             </div>
             <div class="dropdown col-1" style="left:50px; margin-top: 15px; margin-bottom: 15px; position: static;">
               <button class="btn btn-outline-light dropdown-toggle fw-bold" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                Usuario
+              {{ session['nombre'] }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <li><button class="dropdown-item" type="button">Perfil</button></li>
