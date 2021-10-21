@@ -16,7 +16,7 @@ def inicio():
 def login_required(view):
     @functools.wraps(view)
     def wraped_view(**kwargs):
-        if 'correo' not in session:
+        if 'nombre' not in session:
             return redirect('/')
         return view(**kwargs)
     
@@ -98,11 +98,12 @@ def registro():
 
 
 @app.route('/menu/') #Ruta a la pagina del menu
+@login_required
 def menu():
     return render_template('menu.html')
 
 
-@app.route('/logout/')
+@app.route('/logout')
 def logout():
     session.clear()
 
