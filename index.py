@@ -22,6 +22,7 @@ def login_required(view):
     
     return wraped_view
 
+#hooola
 
 @app.route('/ingreso/', methods = ('GET', 'POST')) #Validacion desde el formulario de ingreso
 def ingreso():
