@@ -22,7 +22,6 @@ def login_required(view):
     
     return wraped_view
 
-#hooola
 
 @app.route('/ingreso/', methods = ('GET', 'POST')) #Validacion desde el formulario de ingreso
 def ingreso():
@@ -34,7 +33,7 @@ def ingreso():
         dataBase = get_db()
 
         #select * from Usuarios where correo = 'facorrales@uninorte.edu.co' and contraseña = '12345'
-        ingreso = dataBase.execute('select * from Usuarios where correo = ?', (correo,)).fetchone()
+        ingreso = dataBase.execute('select * from Usuarios where USU_CORREO = ?', (correo,)).fetchone()
         dataBase.commit()
 
         if ingreso is not None:
@@ -46,6 +45,7 @@ def ingreso():
             if(sw):
                 print('Usuario Correcto')
                 session['nombre'] = ingreso[1]
+                session['correo'] = ingreso[3]
                 return redirect('/menu/')
             else:
                 print('Usuario no registrado')
@@ -67,7 +67,7 @@ def registro():
 
             dataBase = get_db()
 
-            valregistro = dataBase.execute('select * from Usuarios where correo = ?', (correo,)).fetchone()
+            valregistro = dataBase.execute('select * from Usuarios where USU_CORREO = ?', (correo,)).fetchone()
             print(correo)
             #dataBase.commit()
             
@@ -81,14 +81,15 @@ def registro():
                 contraseña = generate_password_hash(contraseña)
                 print('Usuario nuevo')
                 #insert into Usuarios (id, nombres, apellidos, correo, contraseña) values('2', 'Mariana', 'Corrales', 'mariana@hotmail.com', '12345');
-                dataBase.execute('insert into Usuarios (nombres, apellidos, correo, contraseña) values(?, ?, ?, ?);', (nombres, apellidos, correo, contraseña))
+                dataBase.execute('insert into Usuarios (USU_NOMBRE, USU_APELLIDO, USU_CORREO, USU_CLAVE) values(?, ?, ?, ?);', (nombres, apellidos, correo, contraseña))
                 #print(nombres, apellidos, correo, contraseña)
                 #dataBase.commit()
 
-                valregistro = dataBase.execute('select * from Usuarios where correo = ?', (correo,)).fetchone()
+                valregistro = dataBase.execute('select * from Usuarios where USU_CORREO = ?', (correo,)).fetchone()
                 dataBase.commit()
                 if valregistro is not None:
                     print('Usuario registrado correctamente')
+                    session['nombre'] = valregistro[1]
                     return redirect('/menu/')
 
         else:
@@ -103,6 +104,25 @@ def registro():
 def menu():
     return render_template('menu.html')
 
+
+@app.route('/perfil/') #Ruta a la pagina de perfil de usuario
+@login_required
+def perfil():
+    correo = session['correo']
+    print(correo)
+    
+    dataBase = get_db()
+    perfil = dataBase.execute('select * from Usuarios where USU_CORREO = ?', (correo,)).fetchone()
+
+    if perfil is not None:
+        print('Perfil Cargado Correctamente')
+        print(perfil[1],perfil[2],perfil[3])
+        session['Usu_Nombre'] = perfil[1]
+        session['Usu_Apellido'] = perfil[2]
+        session['Usu_Correo'] = perfil[3]
+        return render_template('perfil.html')
+
+    return render_template('perfil.html')
 
 @app.route('/logout')
 def logout():

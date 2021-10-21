@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Perfil "{{ session['nombre'] }}" - Insomnia Cookies
+        </title>
+    </head>
+    <body>
+    <!------------------------------------------------------------------------------------------------------------------>
+        <!-- MENU TOP -->
+        
+        <div class="topnav container-fluid">
+            <div class="row">
+            <div class="col-4 text-left">
+                <h2 class="topnavletra fw-bold">Insomnia Cookies</h2>
+            </div>
+            <div class="col-5 text-left">
+            </div>
+            <div class="col-1" style="text-align:left; margin-top: 15px; margin-bottom: 15px;">
+                <input class="form-control" type="text" placeholder="Busqueda">
+            </div>
+            <div class="dropdown col-1" style="left:50px; margin-top: 15px; margin-bottom: 15px; position: static;">
+                <button class="btn btn-outline-light dropdown-toggle fw-bold" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ session['nombre'] }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Perfil</button></li>
+                <li><button class="dropdown-item" type="button">Carro de compras</button></li>
+                <li><a href="{{ url_for('logout') }}" class="dropdown-item" type="button">Cerrar Sesion</a></li>
+                </ul>
+            </div>
+            <div class="col-1 text-rigth">
+                <button type="button" class="fas fa-shopping-bag tamañoicono btn btn-outline-light"></button>
+                <a href="{{ url_for('menu') }}" class="topnavletra topnavposition fw-bold" style="text-decoration: none;">Menu</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card border-secondary mb-3">
+                    <div class="card-header"></div>
+                    <div class="card-body text-secondary">
+                    <h5 class="card-title">Detalle de usuario</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Nombre:
+                                {{ session['Usu_Nombre'] }}
+                            </li>
+                            <li class="list-group-item">
+                                Apellido:
+                                {{ session['Usu_Apellido'] }}
+                            </li>
+                            <li class="list-group-item">
+                                Correo electronico:
+                                {{ session['Usu_Correo'] }}
+                            </li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-secondary mb-3">
+                    <div class="card-header"></div>
+                    <div class="card-body text-secondary">
+                    <h5 class="card-title">Libreta de direcciones</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-secondary mb-3">
+                    <div class="card-header"></div>
+                    <div class="card-body text-secondary">
+                    <h5 class="card-title">Historial de compras</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-secondary mb-3"">
+                    <div class="card-header"></div>
+                    <div class="card-body text-secondary">
+                    <h5 class="card-title">Historial de comentarios</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">                
+            </div>
+            <div class="col-3">
+                <div class="card border-secondary mb-3">
+                    <div class="card-header"></div>
+                    <div class="card-body text-secondary">
+                    <h5 class="card-title">Lista de deseos</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                            <li class="list-group-item">And a fifth one</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!------------------------------------------------------------------------------------------------------------------>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/perfil.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='js/perfil.js') }}"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
